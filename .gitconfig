@@ -1,0 +1,2 @@
+[core]
+	pager = nkef -w | LESSCHARSET=utf-8 less
