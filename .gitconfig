@@ -1,2 +1,5 @@
+[color]
+	ui = true
+	ui = auto
 [core]
-	pager = nkef -w | LESSCHARSET=utf-8 less
+	pager = nkf -w | LESSCHARSET=utf-8 less

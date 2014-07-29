@@ -31,6 +31,8 @@ endif
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-fugitive'
+set statusline=%{fugitive#statusline()}
 NeoBundle 'altercation/vim-colors-solarized'
 syntax enable
 set background=dark
