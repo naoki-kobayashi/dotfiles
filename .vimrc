@@ -1,7 +1,12 @@
 set tabstop=4
 set ambiwidth=double
 set number
-syntax on
+set incsearch
+
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
 
 "----------------
 "NeoBundle
@@ -24,6 +29,14 @@ if neobundle#exists_not_installed_bundles()
   "finish
 endif
 
+NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'altercation/vim-colors-solarized'
+syntax enable
+set background=dark
+colorscheme solarized
+
+NeoBundleCheck
 "--------------
 
 "inoremap {} {}<Left>
