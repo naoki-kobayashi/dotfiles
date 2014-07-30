@@ -3,6 +3,8 @@ set ambiwidth=double
 set number
 set incsearch
 
+set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+
 if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
