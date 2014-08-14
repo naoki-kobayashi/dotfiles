@@ -1,9 +1,14 @@
+set expandtab
 set tabstop=4
+set shiftwidth=4
+set shiftwidth=4
+set autoindent
 set ambiwidth=double
-set number
 set incsearch
-
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+
+nnoremap <S-Tab> gt
+nnoremap <C-S-Tab> gT
 
 if &t_Co > 2 || has("gui_running")
   syntax on
@@ -39,6 +44,7 @@ NeoBundle 'altercation/vim-colors-solarized'
 syntax enable
 set background=dark
 colorscheme solarized
+NeoBundle 'itchyny/lightline.vim'
 
 NeoBundleCheck
 "--------------
