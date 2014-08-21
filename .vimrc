@@ -1,7 +1,8 @@
 set expandtab
-set tabstop=4
-set shiftwidth=4
-set shiftwidth=4
+:autocmd Filetype php set tabstop=4
+:autocmd Filetype php set shiftwidth=4
+:autocmd Filetype javascript set tabstop=2
+:autocmd Filetype javascript set shiftwidth=2
 set autoindent
 set ambiwidth=double
 set incsearch
