@@ -41,11 +41,19 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-fugitive'
 set statusline=%{fugitive#statusline()}
-NeoBundle 'altercation/vim-colors-solarized'
-syntax enable
-set background=dark
-colorscheme solarized
+"NeoBundle 'altercation/vim-colors-solarized'
+"syntax enable
+"set background=dark
+"colorscheme solarized
+NeoBundle 'w0ng/vim-hybrid'
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'Yggdroot/indentLine'
+NeoBundle 'Shougo/neocomplete.vim'
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_start_up = 1
+let g:neocomplete#enable_smart_case = 1
 
 NeoBundleCheck
 "--------------
@@ -61,5 +69,4 @@ NeoBundleCheck
 "é´èë
 "-----------------
 :set dictionary=php.dict
-                        
 
