@@ -3,6 +3,8 @@ set expandtab
 :autocmd Filetype php set shiftwidth=4
 :autocmd Filetype javascript set tabstop=2
 :autocmd Filetype javascript set shiftwidth=2
+:autocmd Filetype ruby set tabstop=2
+:autocmd Filetype ruby set shiftwidth=2
 set autoindent
 set ambiwidth=double
 set incsearch
