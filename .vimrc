@@ -10,8 +10,8 @@ set ambiwidth=double
 set incsearch
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 
-nnoremap <S-Tab> gt
-nnoremap <C-S-Tab> gT
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
 
 if &t_Co > 2 || has("gui_running")
   syntax on
