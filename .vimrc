@@ -1,10 +1,10 @@
 set expandtab
-:autocmd Filetype php set tabstop=4
-:autocmd Filetype php set shiftwidth=4
-:autocmd Filetype javascript set tabstop=2
-:autocmd Filetype javascript set shiftwidth=2
-:autocmd Filetype ruby set tabstop=2
-:autocmd Filetype ruby set shiftwidth=2
+au Filetype php set tabstop=4
+au Filetype php set shiftwidth=4
+au Filetype javascript set tabstop=2
+au Filetype javascript set shiftwidth=2
+au Filetype ruby set tabstop=2
+au Filetype ruby set shiftwidth=2
 set autoindent
 set ambiwidth=double
 set incsearch
@@ -56,6 +56,10 @@ NeoBundle 'Shougo/neocomplete.vim'
 let g:acp_enableAtStartup = 0
 let g:neocomplete#enable_at_start_up = 1
 let g:neocomplete#enable_smart_case = 1
+NeoBundle 'Townk/vim-autoclose'
+NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+au FileType javascript call JavaScriptFold()
+
 
 NeoBundleCheck
 "--------------
