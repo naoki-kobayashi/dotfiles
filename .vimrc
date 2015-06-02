@@ -130,8 +130,8 @@ let g:neocomplete_php_local = 'ja'
 " 一回だけ下記を実行
 " :PhpMakeDict ja
 NeoBundle 'Townk/vim-autoclose'
-NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
-au FileType javascript call JavaScriptFold()
+"NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
+"au FileType javascript call JavaScriptFold()
 NeoBundleLazy 'mattn/emmet-vim', {'autoload':{'filetypes':['html']}}
 "let g:user_emmet_leader_key='<c-t>'
 NeoBundleLazy 'vim-scripts/closetag.vim', {'autoload':{'filetypes':['html']}}
@@ -146,6 +146,15 @@ NeoBundle 'scrooloose/syntastic'
 "let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 "let g:syntastic_check_on_wq = 0
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
+"jsxファイル中のhtml,cssもシンタックスハイライトを効かすための下記実行
+"mkdir ~/.vim/after
+"cp -r ~/.vim/bundle/vim-jsx/after/* ~/.vim/after
+NeoBundle 'mattn/jscomplete-vim'
+let g:jscomplete_use = ['dom', 'moz', 'es6th']
+autocmd FileType javascript setl omnifunc=jscomplete#CompleteJS 
+"  \ :setl omnifunc=jscomplete#CompleteJS
 
 NeoBundleCheck
 call neobundle#end()
