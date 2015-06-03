@@ -26,3 +26,5 @@
         sync-origin-master = git reset --hard origin/master
 [push]
 	default = current
+[merge]
+	ff = false
