@@ -3,7 +3,7 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
-#! install neobundle
+# install neobundle
 if [ -e ~/.vim/bundle ]; then
     echo "neobudle is already installed"
 else
@@ -11,5 +11,14 @@ else
     git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 fi
 
-#! install vim plugin
+# install vim plugin
 ~/.vim/bundle/neobundle.vim/bin/neoinstall
+
+# set vim colors directory
+if [ -e ~/.vim/colors ]; then
+    echo "colors directory is already maked"
+else
+    mkdir -p ~/.vim/colors
+fi
+ln -s ~/.vim/bundle/vim-hybrid/colors/hybrid.vim ~/.vim/colors/hybrid.vim
+ln -s ~/.vim/bundle/vim-hybrid/colors/hybrid-light.vim ~/.vim/colors/hybrid-light.vim
