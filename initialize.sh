@@ -22,3 +22,10 @@ else
 fi
 ln -s ~/.vim/bundle/vim-hybrid/colors/hybrid.vim ~/.vim/colors/hybrid.vim
 ln -s ~/.vim/bundle/vim-hybrid/colors/hybrid-light.vim ~/.vim/colors/hybrid-light.vim
+
+# use mxw/vim-jsx vim plugin
+if [ -e ~/.vim/after ]; then
+    echo "vim after directory is already maked"
+else
+    cp -r ~/.vim/bundle/vim-jsx/after ~/.vim/after
+fi
