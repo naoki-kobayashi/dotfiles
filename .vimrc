@@ -17,6 +17,9 @@ set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set t_Co=256
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
+" when normal mode, exchange ; for : 
+nnoremap ; :
+nnoremap : ;
 
 "NeoBundle
 set nocompatible               " Be iMproved
