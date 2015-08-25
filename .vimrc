@@ -9,6 +9,9 @@ autocmd Filetype html set tabstop=2
 autocmd Filetype html set shiftwidth=2
 autocmd Filetype css set tabstop=2
 autocmd Filetype css set shiftwidth=2
+" 拡張子で読み込みタグ変更                                                      
+autocmd BufNewFile,BufRead *.php set tags+=$HOME/php.tags
+
 "set autocmdtoindent
 set ambiwidth=double
 set incsearch
@@ -20,6 +23,8 @@ nnoremap <S-Tab> gT
 " when normal mode, exchange ; for : 
 nnoremap ; :
 nnoremap : ;
+nnoremap <C-h> :vsp<CR> :exe("tjump ".expand('<cword>'))<CR>
+nnoremap <C-k> :split<CR> :exe("tjump ".expand('<cword>'))<CR>
 
 "NeoBundle
 set nocompatible               " Be iMproved
@@ -158,6 +163,9 @@ NeoBundle 'mattn/jscomplete-vim'
 let g:jscomplete_use = ['dom', 'moz', 'es6th']
 autocmd FileType javascript setl omnifunc=jscomplete#CompleteJS 
 "  \ :setl omnifunc=jscomplete#CompleteJS
+NeoBundle 'szw/vim-tags'
+" set project root
+au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --languages=php -f ~/php.tags/var/www/ 2>/dev/null &"
 
 NeoBundleCheck
 call neobundle#end()
