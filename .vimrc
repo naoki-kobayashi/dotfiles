@@ -135,8 +135,17 @@ elseif neobundle#is_installed('neocomplcache')
 endif
 NeoBundle 'violetyk/neocomplete-php.vim'
 let g:neocomplete_php_local = 'ja'
+let g:omni_sql_no_default_maps = 1
 " ˆê‰ñ‚¾‚¯‰º‹L‚ğÀs
 " :PhpMakeDict ja
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet-snippets/snippets/'
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+" add my snippets
+" :NeoSnippetEdit
 NeoBundle 'Townk/vim-autoclose'
 "NeoBundleLazy 'jelera/vim-javascript-syntax', {'autoload':{'filetypes':['javascript']}}
 "au FileType javascript call JavaScriptFold()
@@ -166,6 +175,10 @@ autocmd FileType javascript setl omnifunc=jscomplete#CompleteJS
 NeoBundle 'szw/vim-tags'
 " set project root
 au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --languages=php -f ~/php.tags/var/www/ 2>/dev/null &"
+NeoBundle 'Shutnik/jshint2.vim'
+let jshint2_commnad = '/usr/lib/node_modules/jshint/bin/jshint'
+" Lint JavaScript files after saving it
+let jshint2_save = 1
 
 NeoBundleCheck
 call neobundle#end()

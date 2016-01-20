@@ -24,6 +24,7 @@
         rm-all = git st | grep deleted | sed -e 's/^.*deleted: *//' | xargs git rm
     # origin/masterの状態に合わせる
         sync-origin-master = git reset --hard origin/master
+        reset-f = git reset --hard ORIG_HEAD
 [push]
 	default = current
 [merge]
