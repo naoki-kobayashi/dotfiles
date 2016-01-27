@@ -9,10 +9,10 @@ darwin*)
    alias la='ls -laG'
    ;;
 linux*)
-    alias ls='ls --color=tty'
-    alias ll='ls -l --color=tty'
-    alias la='ls -la --color=tty'
-    ;;
+   alias ls='ls --color=tty'
+   alias ll='ls -l --color=tty'
+   alias la='ls -la --color=tty'
+   ;;
 esac
 alias dstat='dstat -Tclmdm'
 alias ps_m="ps --no-header -e aux | sort -r -k 3 | head -n 20"
