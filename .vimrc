@@ -9,6 +9,10 @@ autocmd Filetype html set tabstop=2
 autocmd Filetype html set shiftwidth=2
 autocmd Filetype css set tabstop=2
 autocmd Filetype css set shiftwidth=2
+autocmd Filetype yaml set tabstop=2
+autocmd Filetype yaml set shiftwidth=2
+autocmd Filetype sh set tabstop=4
+autocmd Filetype sh set shiftwidth=4
 " 拡張子で読み込みタグ変更                                                      
 autocmd BufNewFile,BufRead *.php set tags+=$HOME/php.tags
 
@@ -50,7 +54,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'tpope/vim-fugitive'
 set statusline=%{fugitive#statusline()}
-"NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'altercation/vim-colors-solarized'
 "syntax enable
 "set background=dark
 "colorscheme solarized
