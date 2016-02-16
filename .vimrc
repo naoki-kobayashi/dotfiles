@@ -180,6 +180,8 @@ let jshint2_commnad = '/usr/lib/node_modules/jshint/bin/jshint'
 " Lint JavaScript files after saving it
 let jshint2_save = 1
 
+NeoBundle 'ekalinin/Dockerfile.vim'
+
 NeoBundleCheck
 call neobundle#end()
 

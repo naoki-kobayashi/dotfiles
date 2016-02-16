@@ -29,3 +29,5 @@ if [ -e ~/.vim/after ]; then
 else
     cp -r ~/.vim/bundle/vim-jsx/after ~/.vim/after
 fi
+ln -s ~/.vim/bundle/Dockerfile.vim/ftdetect/Dockerfile.vim ~/.vim/after/ftdetect/Dockerfile.vim
+ln -s ~/.vim/bundle/Dockerfile.vim/syntax/Dockerfile.vim ~/.vim/after/syntax/Dockerfile.vim
