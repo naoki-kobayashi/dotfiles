@@ -23,11 +23,21 @@ fi
 ln -s ~/.vim/bundle/vim-hybrid/colors/hybrid.vim ~/.vim/colors/hybrid.vim
 ln -s ~/.vim/bundle/vim-hybrid/colors/hybrid-light.vim ~/.vim/colors/hybrid-light.vim
 
-# use mxw/vim-jsx vim plugin
-if [ -e ~/.vim/after ]; then
-    echo "vim after directory is already maked"
-else
-    cp -r ~/.vim/bundle/vim-jsx/after ~/.vim/after
-fi
+#if [ -e ~/.vim/after ]; then
+#    echo "vim after directory is already maked"
+#else
+#    mkdir -p ~/.vim/after
+#fi
+#
+#if [ -e ~/.vim/after/ftdetect ]; then
+#    echo "vim/after/ftdetect directory is already maked"
+#else
+#    cp -r ~/.vim/bundle/vim-jsx/after ~/.vim/after
+#fi
+
+ln -s ~/.vim/bundle/vim-jsx/after/jsx-config.vim ~/.vim/after/jsx-config.vim
+ln -s ~/.vim/bundle/vim-jsx/after/ftplugin/jsx.vim ~/.vim/after/ftplugin/jsx.vim
+ln -s ~/.vim/bundle/vim-jsx/after/indent/jsx.vim ~/.vim/after/indent/jsx.vim
+ln -s ~/.vim/bundle/vim-jsx/after/syntax/jsx.vim ~/.vim/after/syntax/jsx.vim
 ln -s ~/.vim/bundle/Dockerfile.vim/ftdetect/Dockerfile.vim ~/.vim/after/ftdetect/Dockerfile.vim
 ln -s ~/.vim/bundle/Dockerfile.vim/syntax/Dockerfile.vim ~/.vim/after/syntax/Dockerfile.vim
