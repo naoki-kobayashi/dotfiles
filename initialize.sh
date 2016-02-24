@@ -23,17 +23,35 @@ fi
 ln -s ~/.vim/bundle/vim-hybrid/colors/hybrid.vim ~/.vim/colors/hybrid.vim
 ln -s ~/.vim/bundle/vim-hybrid/colors/hybrid-light.vim ~/.vim/colors/hybrid-light.vim
 
-#if [ -e ~/.vim/after ]; then
-#    echo "vim after directory is already maked"
-#else
-#    mkdir -p ~/.vim/after
-#fi
-#
-#if [ -e ~/.vim/after/ftdetect ]; then
-#    echo "vim/after/ftdetect directory is already maked"
-#else
-#    cp -r ~/.vim/bundle/vim-jsx/after ~/.vim/after
-#fi
+if [ -e ~/.vim/after ]; then
+    echo "vim after directory is already maked"
+else
+    mkdir -p ~/.vim/after
+fi
+
+if [ -e ~/.vim/after/ftdetect ]; then
+    echo "vim/after/ftdetect directory is already maked"
+else
+    mkdir -p ~/.vim/after/ftdetect
+fi
+
+if [ -e ~/.vim/after/indent ]; then
+    echo "vim/after/indent directory is already maked"
+else
+    mkdir -p ~/.vim/after/indent
+fi
+
+if [ -e ~/.vim/after/syntax ]; then
+    echo "vim/after/syntax directory is already maked"
+else
+    mkdir -p ~/.vim/after/syntax
+fi
+
+if [ -e ~/.vim/after/ftplugin ]; then
+    echo "vim/after/ftplugin directory is already maked"
+else
+    mkdir -p ~/.vim/after/ftplugin
+fi
 
 ln -s ~/.vim/bundle/vim-jsx/after/jsx-config.vim ~/.vim/after/jsx-config.vim
 ln -s ~/.vim/bundle/vim-jsx/after/ftplugin/jsx.vim ~/.vim/after/ftplugin/jsx.vim
