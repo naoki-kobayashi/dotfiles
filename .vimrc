@@ -59,8 +59,10 @@ NeoBundle 'altercation/vim-colors-solarized'
 "set background=dark
 "colorscheme solarized
 NeoBundle 'w0ng/vim-hybrid'
-let g:hybrid_use_Xresources = 1
+let g:hybrid_custom_term_colors = 1
+let g:hybrid_reduced_contrast = 1
 syntax on
+set background=dark
 colorscheme hybrid
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'Yggdroot/indentLine'
@@ -183,6 +185,8 @@ NeoBundle 'Shutnik/jshint2.vim'
 let jshint2_commnad = '/usr/lib/node_modules/jshint/bin/jshint'
 " Lint JavaScript files after saving it
 let jshint2_save = 1
+
+NeoBundle 'ekalinin/Dockerfile.vim'
 
 NeoBundleCheck
 call neobundle#end()
