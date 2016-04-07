@@ -14,6 +14,14 @@ fi
 # install vim plugin
 ~/.vim/bundle/neobundle.vim/bin/neoinstall
 
+# set vim dict directory
+if [ -e ~/.vim/dict ]; then
+    echo "dict directory is already maked"
+else
+    mkdir -p ~/.vim/dict
+fi
+php -r '$f=get_defined_functions();echo join("\n",$f["internal"]);'|sort > ~/.vim/dict/php.dict
+
 # set vim colors directory
 if [ -e ~/.vim/colors ]; then
     echo "colors directory is already maked"

@@ -190,6 +190,9 @@ let jshint2_save = 1
 
 NeoBundle 'ekalinin/Dockerfile.vim'
 
+" PHP
+autocmd FileType php,ctp :set dictionary=~/.vim/dict/php.dict
+
 " javascript
 " NeoBundleLazy 'jason0x43/vim-js-indent', {'autoload' : {'filetypes' : ['javascript', 'typescript', 'html']}}
 " let g:js_indent_typescript = 1
@@ -200,9 +203,4 @@ NeoBundleLazy 'leafgarland/typescript-vim', {'autoload': {'filetypes': ['typescr
 
 NeoBundleCheck
 call neobundle#end()
-
-"-----------------
-"é´èë
-"-----------------
-:set dictionary=php.dict
 
