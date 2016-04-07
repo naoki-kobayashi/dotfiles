@@ -3,6 +3,8 @@ autocmd Filetype php set tabstop=4
 autocmd Filetype php set shiftwidth=4
 autocmd Filetype javascript set tabstop=2
 autocmd Filetype javascript set shiftwidth=2
+autocmd Filetype typescript set tabstop=2
+autocmd Filetype typescript set shiftwidth=2
 autocmd Filetype ruby set tabstop=2
 autocmd Filetype ruby set shiftwidth=2
 autocmd Filetype html set tabstop=2
@@ -187,6 +189,14 @@ let jshint2_commnad = '/usr/lib/node_modules/jshint/bin/jshint'
 let jshint2_save = 1
 
 NeoBundle 'ekalinin/Dockerfile.vim'
+
+" javascript
+" NeoBundleLazy 'jason0x43/vim-js-indent', {'autoload' : {'filetypes' : ['javascript', 'typescript', 'html']}}
+" let g:js_indent_typescript = 1
+
+" typescript
+" syntax highlight
+NeoBundleLazy 'leafgarland/typescript-vim', {'autoload': {'filetypes': ['typescript'] }}
 
 NeoBundleCheck
 call neobundle#end()
