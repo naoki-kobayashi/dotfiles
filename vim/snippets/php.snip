@@ -1,0 +1,13 @@
+snippet log
+    ob_start();
+    echo '*******************************';
+    var_dump(${0});
+    echo '*******************************';
+    ob_clean();
+
+snippet db_url
+abbr protected function setUp() {}
+	protected function setUp()
+	{
+		$this->connectionURL(\Gig\Config::get(_RUN_MODE_, 'db.${0}.url'));
+	}
