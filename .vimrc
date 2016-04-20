@@ -192,6 +192,16 @@ let jshint2_save = 1
 
 NeoBundle 'ekalinin/Dockerfile.vim'
 
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
+
 " PHP
 autocmd FileType php,ctp :set dictionary=~/.vim/dict/php.dict
 
@@ -202,6 +212,8 @@ autocmd FileType php,ctp :set dictionary=~/.vim/dict/php.dict
 " typescript
 " syntax highlight
 NeoBundleLazy 'leafgarland/typescript-vim', {'autoload': {'filetypes': ['typescript'] }}
+" completion + display synstax error
+NeoBundleLazy 'Quramy/tsuquyomi', {'autoload': {'filetypes': ['typescript'] }}
 
 NeoBundleCheck
 call neobundle#end()
