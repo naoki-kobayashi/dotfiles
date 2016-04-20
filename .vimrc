@@ -15,7 +15,7 @@ autocmd Filetype yaml set tabstop=2
 autocmd Filetype yaml set shiftwidth=2
 autocmd Filetype sh set tabstop=4
 autocmd Filetype sh set shiftwidth=4
-" Šg’£Žq‚Å“Ç‚Ýž‚Ýƒ^ƒO•ÏX                                                      
+" æ‹¡å¼µå­ã§èª­ã¿è¾¼ã¿ã‚¿ã‚°å¤‰æ›´                                                      
 autocmd BufNewFile,BufRead *.php set tags+=$HOME/php.tags
 
 "set autocmdtoindent
@@ -130,6 +130,10 @@ if neobundle#is_installed('neocomplete')
   autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
   autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
   let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+  let g:neocomplete#sources#dictionary#dictinaries = {
+    \ 'default' : '',
+    \ 'php'     : $HOME.'/.vim/dict/php.dict'
+    \ }
 elseif neobundle#is_installed('neocomplcache')
   let g:neocompletecache_enable_at_startup = 1
   let g:neocompletecache_enable_ignore_case = 1
@@ -141,11 +145,7 @@ elseif neobundle#is_installed('neocomplcache')
   let g:neocomplcache_enable_camel_case_completion = 1
   let g:neocomplcache_enable_underbar_completion = 1
 endif
-NeoBundle 'violetyk/neocomplete-php.vim'
-let g:neocomplete_php_local = 'ja'
-let g:omni_sql_no_default_maps = 1
-" ˆê‰ñ‚¾‚¯‰º‹L‚ðŽÀs
-" :PhpMakeDict ja
+
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 let g:neosnippet#snippets_directory='~/.vim/bundle/neosnippet-snippets/snippets/'
@@ -173,7 +173,7 @@ NeoBundle 'scrooloose/syntastic'
 "let g:syntastic_check_on_wq = 0
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
-"jsxƒtƒ@ƒCƒ‹’†‚Ìhtml,css‚àƒVƒ“ƒ^ƒbƒNƒXƒnƒCƒ‰ƒCƒg‚ðŒø‚©‚·‚½‚ß‚Ì‰º‹LŽÀs
+"jsxãƒ•ã‚¡ã‚¤ãƒ«ä¸­ã®html,cssã‚‚ã‚·ãƒ³ã‚¿ãƒƒã‚¯ã‚¹ãƒã‚¤ãƒ©ã‚¤ãƒˆã‚’åŠ¹ã‹ã™ãŸã‚ã®ä¸‹è¨˜å®Ÿè¡Œ
 "mkdir ~/.vim/after
 "cp -r ~/.vim/bundle/vim-jsx/after/* ~/.vim/after
 NeoBundle 'mattn/jscomplete-vim'
@@ -181,8 +181,10 @@ let g:jscomplete_use = ['dom', 'moz', 'es6th']
 autocmd FileType javascript setl omnifunc=jscomplete#CompleteJS 
 "  \ :setl omnifunc=jscomplete#CompleteJS
 NeoBundle 'szw/vim-tags'
+" create tag at project root
+" ctags -R --languages=php -f ~/php.tags `pwd`
 " set project root
-au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --languages=php -f ~/php.tags/var/www/ 2>/dev/null &"
+au BufNewFile,BufRead *.php let g:vim_tags_project_tags_command = "ctags --languages=php -f ~/php.tags 2>/dev/null &"
 NeoBundle 'Shutnik/jshint2.vim'
 let jshint2_commnad = '/usr/lib/node_modules/jshint/bin/jshint'
 " Lint JavaScript files after saving it
