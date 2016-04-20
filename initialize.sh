@@ -68,3 +68,6 @@ ln -s ~/.vim/bundle/vim-jsx/after/indent/jsx.vim ~/.vim/after/indent/jsx.vim
 ln -s ~/.vim/bundle/vim-jsx/after/syntax/jsx.vim ~/.vim/after/syntax/jsx.vim
 ln -s ~/.vim/bundle/Dockerfile.vim/ftdetect/Dockerfile.vim ~/.vim/after/ftdetect/Dockerfile.vim
 ln -s ~/.vim/bundle/Dockerfile.vim/syntax/Dockerfile.vim ~/.vim/after/syntax/Dockerfile.vim
+
+
+ln -s ~/dotfiles/vim/snippets/* ~/.vim/bundle/neosnippet-snippets/snippets/
