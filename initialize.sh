@@ -69,5 +69,9 @@ ln -s ~/.vim/bundle/vim-jsx/after/syntax/jsx.vim ~/.vim/after/syntax/jsx.vim
 ln -s ~/.vim/bundle/Dockerfile.vim/ftdetect/Dockerfile.vim ~/.vim/after/ftdetect/Dockerfile.vim
 ln -s ~/.vim/bundle/Dockerfile.vim/syntax/Dockerfile.vim ~/.vim/after/syntax/Dockerfile.vim
 
-
+if [ -e ~/.vim/bundle/neosnippet-snippets/snippets ]; then
+    echo "vim/bundle/neosnippet-snippets/snippets directory is already maked"
+else
+    mkdir -p ~/.vim/bundle/neosnippet-snippets/snippets
+fi
 ln -s ~/dotfiles/vim/snippets/* ~/.vim/bundle/neosnippet-snippets/snippets/
